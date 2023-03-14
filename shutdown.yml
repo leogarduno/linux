@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: reboot al server
+    command: reboot
+    register: result_valid
+  - debug: var=result_valid.stdout_lines
